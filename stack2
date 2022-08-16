@@ -1,0 +1,31 @@
+class Stack:
+    def __init__(self):
+        self.pancakes = []
+    def add(self, pancake):
+        self.pancakes.append(pancake)
+    def remove(self):
+        if not self.pancakes:
+            print("No elements in stack")
+        else:
+            print(self.pancakes.pop())
+    def show_top(self):
+        print(self.pancakes[-1])
+    def is_empty(self):
+        if len(self.pancakes) >0:
+            print(False)
+        else:
+            print(True)
+
+if __name__ == "__main__":
+    my_stack = Stack()
+    my_stack.is_empty()
+    my_stack.add(5)
+    my_stack.add(4)
+    my_stack.is_empty()
+    my_stack.remove()
+    my_stack.add(7)
+    my_stack.show_top()
+    my_stack.remove()
+    my_stack.remove()
+    my_stack.is_empty()
+    my_stack.remove()
